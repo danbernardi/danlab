@@ -1,0 +1,42 @@
+/* ----------------------------------------------------- */
+// addon configuration
+/* ----------------------------------------------------- */
+
+// susy configuration
+$susy: (
+	columns: 12,  // The number of columns in your grid
+	gutters: .40, // The size of a gutter in relation to a single column
+	global-box-sizing: border-box,
+);
+
+
+// modular scale
+$ms-base: 1rem 1.25rem;
+$ms-ratio: $golden;  // 1.618
+
+body { font-size: ms(0); }
+  h5 { font-size: ms(1); }
+  h4 { font-size: ms(2); }
+  h3 { font-size: ms(3); }
+  h2 { font-size: ms(4); }
+  h1 { font-size: ms(5); }
+
+p, li, span {
+	line-height: 1.618;
+}
+
+// colors
+$red: #c95f4c;
+$green: #349755;
+$lightestblue: #97afb8;
+$lightblue: #5F7F8A;
+$blue: #2B4C57;
+$darkblue: #082934;
+$teal: #8AC9BF;
+$orange: #F8A724;
+$bodytext: lighten(black, 40);
+
+// fontts
+$bodyfont: Muli, Helvetica, Arial, sans-serif;
+$bodyfont-bold: Muli Bold, Helvetica, Artial, sans-serif;
+$headerfont: Open Sans, Helvetica, Arial, sans-serif;

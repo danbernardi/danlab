@@ -1,0 +1,11 @@
+.DS_Store
+.dev/
+error_log
+php_errorlog
+
+temp/
+node_modules/
+npm-debug.log
+.nodemonignore
+.sass-cache/
+wp-config.php

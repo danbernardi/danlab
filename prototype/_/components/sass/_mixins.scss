@@ -1,0 +1,77 @@
+// transition
+@mixin transition($type, $time) {
+	transition: $type $time ease-in-out;
+}
+
+// buttons
+@mixin btn($color) {
+	background: $color;
+	display: inline-block;
+	padding: 9px 28px;
+	color: white;
+	font-family: $headerfont;
+	border-radius: 3px;
+	line-height: 1;
+	font-weight: normal;
+	
+	&:hover {
+		background: lighten($color, 6);
+	}
+}
+
+// extends
+.pointer {
+	cursor: pointer;
+	cursor: hand;
+}
+.clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+// titles
+@mixin ztitle($background, $color) {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	line-height: 1.2;
+	
+	&:before {
+		content: '';
+		display: block;
+		height: 1px;
+		background: $lightblue;
+		margin-bottom: -15px;
+		position: absolute;
+		top: 14px;
+		width: 100%;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		background: $background;
+		display: inline-block;
+		position: relative;
+		padding: 0 20px;
+		text-transform: uppercase;
+		color: $color;
+	}
+}
+
+// icons
+@mixin fontawesome($content) {
+	content: $content;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
