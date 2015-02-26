@@ -27,29 +27,6 @@
 			<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque </p>
 		</article>
 	</div>
-	<aside>
-		<div class="widget search">
-			<form>
-				<input type="text" class="searchinput" placeholder="Search">
-				<input type="submit" class="searchsubmit" value="Go">
-			</form>
-		</div>
-		
-		<div class="widget tagcloud">
-			<h6>Tags</h6>
-			<ul>
-				<li><a href="#">Design</a></li>
-				<li><a href="#">Javascript</a></li>
-				<li><a href="#">Ruby</a></li>
-				<li><a href="#">Tutorial</a></li>
-				<li><a href="#">CSS</a></li>
-				<li><a href="#">jQuery</a></li>
-				<li><a href="#">Resources</a></li>
-				<li><a href="#">AngularJS</a></li>
-				<li><a href="#">Development</a></li>
-			</ul>
-		</div>
-	</aside>
 </section>
 
 <?php include('footer.php') ?>

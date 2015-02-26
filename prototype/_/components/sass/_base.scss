@@ -35,10 +35,10 @@ img {
 // Layout
 .row {
 	@include container();
-	max-width: 1130px;
+	max-width: 845px;
 	margin: 0 auto;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 .cols3 {
 
@@ -186,13 +186,13 @@ form {
 	padding-bottom: 70px;
 }
 
-.hentry {
+/*.hentry {
 	@include span(9 of 12);
 }
 aside {
 	@include span(3 of 12 last);
 	padding-top: 1.3em;
-}
+}*/
 
 .side {
 	@include span(2 of 12);
@@ -204,8 +204,9 @@ aside {
 		font-weight: bold;
 		text-align: center;
 		margin-top: 1.3em;
-		padding: 2px 1.27777778em;
+		padding: 2px 0;
 		border-radius: 3px;
+		width: 100%;
 	}
 }
 article {
