@@ -1,10 +1,9 @@
 @import "compass";        // compass library
 @import "compass/reset";  // css reset
+@import "compass/typography/vertical_rhythm"; // vertical rythm
 @import "modular-scale";  // default scaling of text based on golden ratio
 @import "susy";           // sass based grid
 @import "fontawesome";    // icon library
 @import "variables";      // store variables here
 @import "mixins";         // store mixins here
-@import "slick";		  // slick slider base
-@import "slick-theme";    // slick slider theme
 @import "base";           // store main styles here

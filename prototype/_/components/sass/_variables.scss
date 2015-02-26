@@ -5,13 +5,19 @@
 // susy configuration
 $susy: (
 	columns: 12,  // The number of columns in your grid
-	gutters: .40, // The size of a gutter in relation to a single column
+	gutters: .70, // The size of a gutter in relation to a single column
 	global-box-sizing: border-box,
 );
 
 
+// vertical rythm
+$base-font-size: 18px;
+$base-line-height: 27px;
+@include establish-baseline;
+
+
 // modular scale
-$ms-base: 1rem 1.25rem;
+$ms-base: 1rem 1.4rem;
 $ms-ratio: $golden;  // 1.618
 
 body { font-size: ms(0); }
@@ -26,17 +32,10 @@ p, li, span {
 }
 
 // colors
-$red: #c95f4c;
-$green: #349755;
-$lightestblue: #97afb8;
-$lightblue: #5F7F8A;
+$bodybg: lighten(#f8fcfe, 10);
 $blue: #2B4C57;
-$darkblue: #082934;
-$teal: #8AC9BF;
-$orange: #F8A724;
 $bodytext: lighten(black, 40);
 
 // fontts
-$bodyfont: Muli, Helvetica, Arial, sans-serif;
-$bodyfont-bold: Muli Bold, Helvetica, Artial, sans-serif;
-$headerfont: Open Sans, Helvetica, Arial, sans-serif;
+$bodyfont: Lora, Georgia, serif;
+$headerfont: Source Sans Pro, Helvetica, Arial, sans-serif;

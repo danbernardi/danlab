@@ -1,157 +1,55 @@
 <?php include('header.php')?>
-<section class="slider">
-	<div class="slide">
-		<div class="row">
-			<h2>Earn <em>7/8/9</em> returns,<br>instantly</h2>
-			<p>We give you access to active cash<br>flowing real estate investments</p>
-			<a class="btn" href="#">Learn More</a>
-			<a class="btn" href="#">Past Deals</a>
-			<img class="piechart" src="img/piechart.svg">
-		</div>
-	</div>
-	<div class="slide">
-		<div class="row">
-			<h2>Earn <em>7/8/9</em> returns,<br>instantly</h2>
-			<p>We give you access to active cash<br>flowing real estate investments</p>
-			<a class="btn" href="#">Learn More</a>
-			<a class="btn" href="#">Past Deals</a>
-			<img class="mockup" src="img/slidermockup01.jpg">
-			<img class="mockup moc2" src="img/slidermockup02.jpg">
-		</div>
-	</div>
-	<div class="slide">
-		<div class="row">
-			<h2>Earn <em>7/8/9</em> returns,<br>instantly</h2>
-			<p>We give you access to active cash<br>flowing real estate investments</p>
-			<a class="btn" href="#">Learn More</a>
-			<a class="btn" href="#">Past Deals</a>
-			<img class="piechart" src="img/piechart.svg">
-		</div>
-	</div>
-	<div class="slide">
-		<div class="row">
-			<h2>Earn <em>7/8/9</em> returns,<br>instantly</h2>
-			<p>We give you access to active cash<br>flowing real estate investments</p>
-			<a class="btn" href="#">Learn More</a>
-			<a class="btn" href="#">Past Deals</a>
-			<img class="mockup" src="img/slidermockup01.jpg">
-			<img class="mockup moc2" src="img/slidermockup02.jpg">
-		</div>
-	</div>
-</section>
-<section class="callout">
-	<div class="row cols3">
-		<div class="col">
-			<a href="#">
-				<div class="icon"><i class="fa fa-users"></i></div>
-				<h5>Who We Are</h5>
-				<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus curabitur blandit tempus</p>
-				<span class="btn">Read More</span>
-			</a>
-		</div>
-		<div class="col">
-			<a href="#">
-				<div class="icon"><i class="fa fa-fire"></i></div>
-				<h5>Why We're Different</h5>
-				<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus curabitur blandit tempus</p>
-				<span class="btn">Read More</span>
-			</a>
-		</div>
-		<div class="col">
-			<a href="#">
-				<div class="icon"><i class="fa fa-bar-chart-o"></i></div>
-				<h5>Invest in Our Stability</h5>
-				<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus curabitur blandit tempus</p>
-				<span class="btn">Read More</span>
-			</a>
-		</div>
-	</div>
-</section>
-<section class="featured">
-	<div class="ztitle row"><h4>Completed Investments</h4></div>
-	<div class="row">
-		<div class="slick investments">
-			<div class="investment">
-				<a href="#">
-					<img src="img/investments/invesment01.jpg">
-					<h6>3317 / 3319 S. Jefferson Ave</h6>
-					<span class="state">Missouri | Rental Property</span>
-					<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor porta leo.</p>
-					<ul class="meta">
-						<li>Total Raise Amount<span>$50,000.00</span></li>
-						<li>Annualized Return<span>7%</span></li>
-						<li>Loan Type<span>Interest plus Pay Down</span></li>
-					</ul>
-				</a>
-			</div>
-			<div class="investment">
-				<a href="#">
-					<img src="img/investments/invesment02.jpg">
-					<h6>3317 / 3319 S. Jefferson Ave</h6>
-					<span class="state">Missouri | Rental Property</span>
-					<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor porta leo.</p>
-					<ul class="meta">
-						<li>Total Raise Amount<span>$50,000.00</span></li>
-						<li>Annualized Return<span>7%</span></li>
-						<li>Loan Type<span>Interest plus Pay Down</span></li>
-					</ul>
-				</a>
-			</div>
-			<div class="investment">
-				<a href="#">
-					<img src="img/investments/invesment03.jpg">
-					<h6>3317 / 3319 S. Jefferson Ave</h6>
-					<span class="state">Missouri | Rental Property</span>
-					<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor porta leo.</p>
-					<ul class="meta">
-						<li>Total Raise Amount<span>$50,000.00</span></li>
-						<li>Annualized Return<span>7%</span></li>
-						<li>Loan Type<span>Interest plus Pay Down</span></li>
-					</ul>
-				</a>
-			</div>
-			<div class="investment">
-				<a href="#">
-					<img src="img/investments/invesment04.jpg">
-					<h6>3317 / 3319 S. Jefferson Ave</h6>
-					<span class="state">Missouri | Rental Property</span>
-					<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor porta leo.</p>
-					<ul class="meta">
-						<li>Total Raise Amount<span>$50,000.00</span></li>
-						<li>Annualized Return<span>7%</span></li>
-						<li>Loan Type<span>Interest plus Pay Down</span></li>
-					</ul>
-				</a>
-			</div>
-			<div class="investment">
-				<a href="#">
-					<img src="img/investments/invesment05.jpg">
-					<h6>3317 / 3319 S. Jefferson Ave</h6>
-					<span class="state">Missouri | Rental Property</span>
-					<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor porta leo.</p>
-					<ul class="meta">
-						<li>Total Raise Amount<span>$50,000.00</span></li>
-						<li>Annualized Return<span>7%</span></li>
-						<li>Loan Type<span>Interest plus Pay Down</span></li>
-					</ul>
-				</a>
-			</div>
-			<div class="investment">
-				<a href="#">
-					<img src="img/investments/invesment06.jpg">
-					<h6>3317 / 3319 S. Jefferson Ave</h6>
-					<span class="state">Missouri | Rental Property</span>
-					<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor porta leo.</p>
-					<ul class="meta">
-						<li>Total Raise Amount<span>$50,000.00</span></li>
-						<li>Annualized Return<span>7%</span></li>
-						<li>Loan Type<span>Interest plus Pay Down</span></li>
-					</ul>
-				</a>
-			</div>
-		</div>
-	</div>
-</section>
 
+<section class="content row">
+	<div class="hentry">
+		<div class="side">
+			<div class="date">Aug 21</div>
+		</div>
+		<article class="post">
+			<div class="posttitle">
+				<h2>Vestibulum Bibendum Ultricies</h2>
+				<em>Posted by Dan Bernardi | Aug 13 2015</em>
+			</div>
+			
+			<p><em>Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Duis mollis commodo luctus.</em></p>
+			
+			<p><strong></strong>Vestibulum id ligula porta felis euismod semper.</strong> Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper.</p>
+			<h4>Vestibulum Bibendum Ultricies</h4>
+			<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque </p>
+			
+			<figure>
+				<div data-height="376" data-theme-id="0" data-slug-hash="KwRyNJ" data-default-tab="css" data-user="Emil25" class='codepen'></div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+			</figure>
+			
+			<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+			
+			<h4>Vestibulum Bibendum Ultricies</h4>
+			<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque </p>
+		</article>
+	</div>
+	<aside>
+		<div class="widget search">
+			<form>
+				<input type="text" class="searchinput" placeholder="Search">
+				<input type="submit" class="searchsubmit" value="Go">
+			</form>
+		</div>
+		
+		<div class="widget tagcloud">
+			<h6>Tags</h6>
+			<ul>
+				<li><a href="#">Design</a></li>
+				<li><a href="#">Javascript</a></li>
+				<li><a href="#">Ruby</a></li>
+				<li><a href="#">Tutorial</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">jQuery</a></li>
+				<li><a href="#">Resources</a></li>
+				<li><a href="#">AngularJS</a></li>
+				<li><a href="#">Development</a></li>
+			</ul>
+		</div>
+	</aside>
+</section>
 
 <?php include('footer.php') ?>
