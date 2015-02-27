@@ -1,11 +1,11 @@
 <?php include('header.php')?>
 
 <section class="content row">
-	<div class="hentry">
+	<div class="container">
 		<div class="side">
 			<div class="date">Aug 21</div>
 		</div>
-		<article class="post">
+		<article class="post hentry">
 			<div class="posttitle">
 				<h2>Vestibulum Bibendum Ultricies</h2>
 				<em>Posted by Dan Bernardi | Aug 13 2015</em>

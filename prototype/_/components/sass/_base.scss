@@ -31,6 +31,9 @@ strong {
 img {
 	max-width: 100%;
 }
+#pagewrap {
+	position: relative;
+}
 
 // Layout
 .row {
@@ -39,6 +42,7 @@ img {
 	margin: 0 auto;
 	padding-left: 30px;
 	padding-right: 30px;
+	position: relative;
 }
 .cols3 {
 
@@ -73,8 +77,14 @@ img {
 
 // header
 header {
-	padding: 16px 0;
-	background: rgba(black,0.1);
+	background: #E5E5E5;
+	
+	.row {
+		@include transition(transform, 0.2s);
+		background: #E5E5E5;
+		z-index: 2;
+		line-height: 61px;
+	}
 	
 	.logo {
 		@include span(2 of 12);
@@ -97,7 +107,34 @@ header {
 		}
 	}
 }
-
+.off-canvas-menu {
+	@extend .clearfix;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	
+	nav {
+		box-shadow: inset 2px 0px 21px rgba(black, 0.6);
+		position: fixed;
+		top: 0;
+		background: #444;
+		padding: 40px;
+		color: #F5DEB3;
+		height: 100vh;
+		width: 320px;
+		margin-left: -320px;
+		display: block;
+		z-index: 1;
+	}
+}
+.offCanvas-open {
+	header .row,
+	.content {
+		@include transition(transform, 0.2s);
+		transform: translateX(-320px);
+	}
+}
 
 
 //widgets 
@@ -182,8 +219,11 @@ form {
 // article
 
 .content {
+	@include transition(transform, 0.2s);
 	padding-top: 70px;
 	padding-bottom: 70px;
+	z-index: 2;
+	background: #fff;
 }
 
 /*.hentry {
@@ -211,6 +251,7 @@ aside {
 }
 article {
 	@include span(10 of 12 last);
+	z-index: 2;
 }
 
 .sidenav {

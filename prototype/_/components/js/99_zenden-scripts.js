@@ -9,4 +9,11 @@ $(document).ready(function () {
 		$('a[href^="' + location.pathname.split("/")[2] + '"]').parent('li').addClass('current-menu-item');
 	}());
 	
+	
+	(function offCanvasMenu() {
+		$('.offCanvas-trigger').on('click', function (e) {
+			e.preventDefault();
+			$('body').toggleClass('offCanvas-open');
+		});
+	}());
 });
