@@ -3,12 +3,20 @@
 <section class="content row">
 	<div class="container">
 		<div class="side">
-			<div class="date">Aug 21</div>
+			<!--<div class="date">Aug 21</div>-->
 		</div>
 		<article class="post hentry">
 			<div class="posttitle">
-				<h2>Vestibulum Bibendum Ultricies</h2>
-				<em>Posted by Dan Bernardi | Aug 13 2015</em>
+				<span class="tags">
+					<a href="#">Web Design</a>
+					<a href="#">Tutorial</a>
+					<a href="#">Development</a>
+					<a href="#">Development</a>
+					<a href="#">Development</a>
+				</span>
+				<h2>My Web Design Process &amp; Workflow</h2>
+				<em>Posted by Dan Bernardi | August 21, 2015</em>
+				
 			</div>
 			
 			<p><em>Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Duis mollis commodo luctus.</em></p>

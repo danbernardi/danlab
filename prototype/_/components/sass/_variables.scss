@@ -32,9 +32,14 @@ p, li, span {
 }
 
 // colors
-$bodybg: lighten(#f8fcfe, 10);
-$blue: #2B4C57;
-$bodytext: lighten(black, 40);
+$bodybg: white;
+$blue: #127687;
+$tan: #E3CD8D;
+$darkertan: #CDBA83;
+$green: #2D8712;
+$yellow: #C2AA0C;
+
+$bodytext: #585344;
 
 // fontts
 $bodyfont: Lora, Georgia, serif;

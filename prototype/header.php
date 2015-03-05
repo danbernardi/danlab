@@ -6,12 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<title>danlab.me</title>
 	<link rel="stylesheet" href="_/css/styles.css">
+	<!--<link rel="stylesheet" href="http://basehold.it/29">-->
 </head>
 <body class="home">
 <section id="pagewrap">
 	<header>
 		<div class="row">
-			<div class="logo">danlab</div>
+			<div class="logo"><a href="index.php"><img src="img/logo.svg" alt="danlab.me"></a></div>
+			<div class="slogan">
+				<span><strong>danlab.me</strong></span>
+				<span>My name is Dan. I like web stuff.</span>
+				<span>Welcome to my personal site &amp; blog.</span>
+			</div>
 			<nav>
 				<ul>
 					<li><a href="index.php" class="offCanvas-trigger"><i class="fa fa-bars"></i> MENU</a></li>

@@ -10,7 +10,18 @@ body {
 	font-family: $bodyfont;
 	color: $bodytext;
 	font-size: 18px;
-	background: $bodybg;
+	padding-top: 12px;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 12px;
+		background: #eee;
+		display: block;
+		z-index: 3;
+	}
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: $headerfont;
@@ -24,6 +35,7 @@ em {
 	font-style: italic;
 	font-size: 24px;
 	line-height: 1.618;
+	
 }
 strong {
 	font-weight: bold;
@@ -33,16 +45,45 @@ img {
 }
 #pagewrap {
 	position: relative;
+	overflow: hidden;
+}
+
+.colorblocks {
+	@extend .clearfix;
+	li {
+		display: inline-block;
+		float: left;
+		width: 100px;
+		height: 75px;
+		&.blue {
+			background: $blue;
+		}
+		&.tan {
+			background: $tan;
+		}
+		&.darkertan {
+			background: $darkertan;
+		}
+		&.green {
+			background: $green;
+		}
+		&.yellow {
+			background: $yellow;
+		}
+	}
 }
 
 // Layout
 .row {
 	@include container();
-	max-width: 845px;
+	max-width: 1200px;
 	margin: 0 auto;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 90px;
+	padding-right: 90px;
 	position: relative;
+}
+.container {
+	@extend .clearfix;
 }
 .cols3 {
 
@@ -77,21 +118,46 @@ img {
 
 // header
 header {
-	background: #E5E5E5;
 	
 	.row {
 		@include transition(transform, 0.2s);
-		background: #E5E5E5;
+		transition-timimg-function: cubic-bezier(0.770, 0, 0.465, 1);
+		background: white;
 		z-index: 2;
 		line-height: 61px;
+		border-top: 12px solid #eee;
+		margin-top: -12px;
 	}
-	
-	.logo {
+	.logo a {
 		@include span(2 of 12);
+		transition: background 0.2s ease-in-out;
+		background: #fafafa;
+		text-align: center;
+		border-bottom-right-radius: 50%;
+		border-bottom-left-radius: 50%;
+		padding-bottom: .2em;
+		&:hover {
+			background: #eee;
+		}
+		
+		img {
+			width: 58px;
+			padding-top: .2em;
+		}
 	}
-	
+	.slogan {
+		@include span(8 of 12);
+		padding-top: .6em;
+		span {
+			font-size: 14px;
+			color: rgba(black, 0.4);
+			display: block;
+			font-style: italic;
+			line-height: 1.7;
+		}
+	}
 	nav {
-		@include span(10 of 12 last);
+		@include span(2 of 12 last);
 		
 		ul {
 			float: right;
@@ -101,7 +167,12 @@ header {
 				margin-left: 25px;
 				
 				a {
-					font-size: 14px;
+					transition: color 0.2s ease-in-out;
+					font-size: 15px;
+					font-weight: bold;
+					&:hover {
+						color: $blue;
+					}
 				}
 			}
 		}
@@ -111,28 +182,34 @@ header {
 	@extend .clearfix;
 	position: absolute;
 	right: 0;
-	top: 0;
 	z-index: 1;
 	
 	nav {
-		box-shadow: inset 2px 0px 21px rgba(black, 0.6);
+		box-shadow: inset 0 0 21px rgba(black, 0.1);
 		position: fixed;
-		top: 0;
-		background: #444;
-		padding: 40px;
-		color: #F5DEB3;
-		height: 100vh;
+		top: -20px;
+		padding: 60px 0;
+		height: calc(100vh + 40px);
 		width: 320px;
 		margin-left: -320px;
 		display: block;
 		z-index: 1;
+		background: url('../../img/shattered_@2X.png') repeat #444;
+		background-size: 250px;
+		
+		a {
+			color: white;
+			padding: 6px 20px;
+			display: block;
+		}
 	}
 }
 .offCanvas-open {
 	header .row,
 	.content {
-		@include transition(transform, 0.2s);
-		transform: translateX(-320px);
+		@include transition(transform, 0.35s);
+		transition-timimg-function: ease-in-out;
+		transform: translateX(-321px);
 	}
 }
 
@@ -158,12 +235,12 @@ header {
 			a {
 				display: block;
 				font-size: 13px;
-				background: lighten(saturate($blue, 60), 20);
+				background: lighten(saturate($yellow, 60), 20);
 				padding: 4px 9px;
 				border-radius: 4px;
 				color: white;
 				&:hover {
-					background: lighten(lighten(saturate($blue, 60), 20), 10);
+					background: lighten(lighten(saturate($yellow, 60), 20), 10);
 				}
 			}
 		}
@@ -206,7 +283,7 @@ form {
 		top: 0;
 		height: 100%;
 		width: 41px;
-		background: $blue;
+		background: $yellow;
 		color: white;
 		text-align: center;
 		border: none;
@@ -220,8 +297,8 @@ form {
 
 .content {
 	@include transition(transform, 0.2s);
-	padding-top: 70px;
-	padding-bottom: 70px;
+	transition-timimg-function: cubic-bezier(0.770, 0, 0.465, 1);
+	padding-top: 20px;
 	z-index: 2;
 	background: #fff;
 }
@@ -239,12 +316,13 @@ aside {
 	
 	.date {
 		display: inline-block;
-		background: #555;
-		color: #FFF;
+		background: #ddd;
+		color: $bodytext;
 		font-weight: bold;
+		font-size: 16px;
 		text-align: center;
-		margin-top: 1.3em;
-		padding: 2px 0;
+		margin-top: 0.48em;
+		padding: 42px 0;
 		border-radius: 3px;
 		width: 100%;
 	}
@@ -252,6 +330,7 @@ aside {
 article {
 	@include span(10 of 12 last);
 	z-index: 2;
+	padding-bottom: 70px;
 }
 
 .sidenav {
@@ -276,10 +355,51 @@ figure {
 	margin-bottom: 1.618em;
 	h2 {
 		margin-bottom: 0;
+		margin-top: 6px;
+		line-height: 1.2;
 	}
 	em {
 		font-size: 16px;
 	}
+}
+.tags {
+	font-size: 14px;
+	display: block;
+	margin-top: 0.6em;
+	
+	a {
+		background: $blue;
+		padding: 0 13px;
+		border-radius: 3px;
+		color: white;
+		margin-bottom: 5px;
+		display: inline-block;
+		&:hover {
+			background: #444 !important;
+		}
+		&:nth-child(2n) {
+			background: $green;
+		}
+		&:nth-child(3n) {
+			background: $yellow;
+		}
+		&:nth-child(4n) {
+			background: $darkertan;
+		}
+		&:nth-child(5n) {
+			background: $tan;
+		}
+	}
+}
+.fullwidth {
+	width: calc(100% + 180px);
+	margin-left: -90px;
+}
+
+footer {
+	@extend .fullwidth;
+	position: relative;
+	z-index: 1;
 }
 
 .topfooter {

@@ -15,5 +15,9 @@ $(document).ready(function () {
 			e.preventDefault();
 			$('body').toggleClass('offCanvas-open');
 		});
+		$('body.offCanvas-open .content').on('click', function (e) {
+			$('body').removeClass('offCanvas-open');
+			console.log('test');
+		});
 	}());
 });
