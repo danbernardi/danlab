@@ -76,7 +76,7 @@ img {
 // Layout
 .row {
 	@include container();
-	max-width: 1100px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding-left: 90px;
 	padding-right: 90px;
@@ -185,18 +185,20 @@ header {
 	z-index: 1;
 	
 	nav {
+    @include transition(transform, 0.2s);
+    transition-timimg-function: ease-in-out;
 		box-shadow: inset 0 0 21px rgba(black, 0.1);
 		position: fixed;
 		top: -20px;
+    right: -320px;
 		padding: 60px 0;
 		height: calc(100vh + 40px);
 		width: 320px;
-		margin-left: -320px;
 		display: block;
-		z-index: 1;
+		z-index: 99;
 		background: url('../../img/shattered_@2X.png') repeat #444;
 		background-size: 250px;
-    visibility: hidden;
+    transform: translateX(0);
 		
 		a {
 			color: white;
@@ -207,14 +209,12 @@ header {
 }
 .offCanvas-open {
 	header .row,
-	.content {
+	.content,
+  .off-canvas-menu nav {
 		@include transition(transform, 0.35s);
 		transition-timimg-function: ease-in-out;
-		transform: translateX(-321px);
+		transform: translateX(-320px);
 	}
-  nav {
-    visibility: visible;
-  }
 }
 
 
