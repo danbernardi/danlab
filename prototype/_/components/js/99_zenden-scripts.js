@@ -13,6 +13,7 @@ $(document).ready(function () {
 	(function offCanvasMenu() {
 		$('.offCanvas-trigger').on('click', function (e) {
 			e.preventDefault();
+      console.log('test');
 			$('body').toggleClass('offCanvas-open');
 		});
 		$('body.offCanvas-open .content').on('click', function (e) {

@@ -76,7 +76,7 @@ img {
 // Layout
 .row {
 	@include container();
-	max-width: 1200px;
+	max-width: 1100px;
 	margin: 0 auto;
 	padding-left: 90px;
 	padding-right: 90px;
@@ -146,7 +146,7 @@ header {
 		}
 	}
 	.slogan {
-		@include span(8 of 12);
+		@include span(7 of 12);
 		padding-top: .6em;
 		span {
 			font-size: 14px;
@@ -157,7 +157,7 @@ header {
 		}
 	}
 	nav {
-		@include span(2 of 12 last);
+		@include span(3 of 12 last);
 		
 		ul {
 			float: right;
@@ -196,6 +196,7 @@ header {
 		z-index: 1;
 		background: url('../../img/shattered_@2X.png') repeat #444;
 		background-size: 250px;
+    visibility: hidden;
 		
 		a {
 			color: white;
@@ -211,6 +212,9 @@ header {
 		transition-timimg-function: ease-in-out;
 		transform: translateX(-321px);
 	}
+  nav {
+    visibility: visible;
+  }
 }
 
 
@@ -298,7 +302,7 @@ form {
 .content {
 	@include transition(transform, 0.2s);
 	transition-timimg-function: cubic-bezier(0.770, 0, 0.465, 1);
-	padding-top: 20px;
+	padding-top: 2.8em;
 	z-index: 2;
 	background: #fff;
 }
@@ -355,8 +359,8 @@ figure {
 	margin-bottom: 1.618em;
 	h2 {
 		margin-bottom: 0;
-		margin-top: 6px;
-		line-height: 1.2;
+		margin-top: .15em;
+		line-height: 1.12;
 	}
 	em {
 		font-size: 16px;
@@ -369,10 +373,10 @@ figure {
 	
 	a {
 		background: $blue;
-		padding: 0 13px;
+		padding: .25em 1.7em;
 		border-radius: 3px;
 		color: white;
-		margin-bottom: 5px;
+		margin-bottom: .7em;
 		display: inline-block;
 		&:hover {
 			background: #444 !important;

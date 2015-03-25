@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<title>danlab.me</title>
 	<link rel="stylesheet" href="_/css/styles.css">
-	<!--<link rel="stylesheet" href="http://basehold.it/29">-->
 </head>
 <body class="home">
 <section id="pagewrap">
