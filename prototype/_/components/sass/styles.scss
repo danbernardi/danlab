@@ -4,6 +4,9 @@
 @import "modular-scale";  // default scaling of text based on golden ratio
 @import "susy";           // sass based grid
 @import "fontawesome";    // icon library
+@import "config";         // store configurations here
 @import "variables";      // store variables here
 @import "mixins";         // store mixins here
+@import "modules";        // store universal modules here
+@import "layout";         // store layout specific styles here
 @import "base";           // store main styles here
