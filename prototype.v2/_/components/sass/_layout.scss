@@ -1,0 +1,40 @@
+// layout
+
+.row {
+	@include container();
+	max-width: 66.6666666em; // 1200px
+	margin: 0 auto;
+	padding-left: 5em;
+	padding-right: 5em;
+	position: relative;
+}
+.container {
+	@extend .clearfix;
+}
+.cols3 {
+
+	.col {
+		@include span(4 of 12);
+		
+		&:nth-of-type(3n) {
+			@include last();
+		}
+	}
+}
+.cols4 {
+	.col {
+		@include span(3 of 12);
+		
+		&:nth-of-type(4n) {
+			@include last();
+		}
+	}
+}
+.clear {
+	@extend .clearfix;
+}
+
+.fullwidth {
+	width: calc(100% + 10em);
+	margin-left: -5em;
+}

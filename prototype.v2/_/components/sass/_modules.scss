@@ -1,0 +1,88 @@
+// modules
+
+//widgets 
+.widget {
+	h6 {
+		margin-bottom: .3em;
+	}
+	margin-bottom: 1.618em;
+}
+
+// base form styles
+form {
+	input {
+		padding: 0.5em 0.77777778em;
+		display: block;
+		width: 100%;
+		border: 1px solid #ddd;
+		&:focus {
+			outline: none;
+			border-color: #888;
+		}
+	}
+}
+
+// search form
+.search {
+	position: relative;
+	&:before {
+		@include fontawesome('\f002');
+		position: absolute;
+		left: 0.55555556em;
+		top: 0.38888889em;
+		pointer-events: none;
+		color: rgba(black, 0.3);
+	}
+	
+	input[type=text] {
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		padding-left: 2.22222222em;
+		width: calc(100% - 2.16666667em);
+	}
+	input[type=submit] {
+		@extend .pointer;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 2.27777778em;
+		background: $yellow;
+		color: white;
+		text-align: center;
+		border: none;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+}
+
+// tags
+.tags {
+	font-size: 0.77777778em;
+	display: block;
+	margin-top: 0.6em;
+	
+	a {
+		background: $blue;
+		padding: .25em 1.7em;
+		border-radius: 3px;
+		color: white;
+		margin-bottom: .7em;
+		display: inline-block;
+		&:hover {
+			background: #444 !important;
+		}
+		&:nth-child(2n) {
+			background: $green;
+		}
+		&:nth-child(3n) {
+			background: $yellow;
+		}
+		&:nth-child(4n) {
+			background: $darkertan;
+		}
+		&:nth-child(5n) {
+			background: $tan;
+		}
+	}
+}
