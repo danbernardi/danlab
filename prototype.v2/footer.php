@@ -6,6 +6,7 @@
 		
 	</div>
 </footer>
+</section>
 <script src="_/js/scripts.js"></script>
 </body>
 </html>

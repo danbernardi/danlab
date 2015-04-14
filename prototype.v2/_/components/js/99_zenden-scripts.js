@@ -10,13 +10,16 @@ $(document).ready(function () {
 	}());
 	
 	
-	(function offCanvasMenu() {
-		$('.offCanvas-trigger').on('click', function (e) {
-			e.preventDefault();
-			$('body').toggleClass('offCanvas-open');
-		});
-		$('body.offCanvas-open .content').on('click', function (e) {
-			$('body').removeClass('offCanvas-open');
-		});
+	(function onCanvasMenu() {
+		$("#on-canvas-menu").mmenu({
+      // options
+      offCanvas: false,
+      slidingSubmenus: true
+    }, {
+         // configuration
+      offCanvas: {
+        pageNodetype: "section"
+      }
+    });
 	}());
 });

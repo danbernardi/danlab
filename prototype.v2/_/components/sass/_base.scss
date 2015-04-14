@@ -7,29 +7,18 @@ a {
 	color: inherit;
 }
 body {
-	font-family: $bodyfont;
+  font-family: $sans-serif;
 	color: $bodytext;
 	font-size: 112.5%;
-	padding-top: 0.66666667rem;
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 0.66666667rem;
-		background: #eee;
-		display: block;
-		z-index: 3;
-	}
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: $headerfont;
 	font-weight: 700;
-	line-height: 1.618;
+  line-height: 1.4;
+  margin-bottom: .3em;
 }
 p {
 	margin-bottom: 1.618rem;
+  font-size: 1rem;
 }
 em {
 	font-style: italic;
@@ -48,163 +37,22 @@ img {
 	overflow: hidden;
 }
 
-
-.divider {
-	clear: both;
-	display: block;
-	border-bottom: 1px solid #ddd;
-	width: 100%;
-	margin: 1.66666667rem 0;
-}
-
-
-// header
-header {
-	
-	.row {
-		@include transition(transform, 0.2s);
-		transition-timimg-function: cubic-bezier(0.770, 0, 0.465, 1);
-		background: white;
-		z-index: 2;
-		line-height: 3.38888889rem;
-		border-top: 0.66666667rem solid #eee;
-		margin-top: -0.66666667rem;
-	}
-	.logo a {
-		@include span(2 of 12);
-		transition: background 0.2s ease-in-out;
-		background: #fafafa;
-		text-align: center;
-		border-bottom-right-radius: 50%;
-		border-bottom-left-radius: 50%;
-		padding-bottom: .2rem;
-		&:hover {
-			background: #eee;
-		}
-		
-		img {
-			width: 58px;
-			padding-top: .2rem;
-		}
-	}
-	.slogan {
-		@include span(7 of 12);
-		padding-top: .6rem;
-		span {
-			font-size: 14px;
-			color: rgba(black, 0.4);
-			display: block;
-			font-style: italic;
-			line-height: 1.7;
-		}
-	}
-	nav {
-		@include span(3 of 12 last);
-		
-		ul {
-			float: right;
-			
-			li {
-				display: inline-block;
-				margin-left: 25px;
-				
-				a {
-					transition: color 0.2s ease-in-out;
-					font-size: 15px;
-					font-weight: bold;
-					&:hover {
-						color: $blue;
-					}
-				}
-			}
-		}
-	}
-}
-.off-canvas-menu {
-	@extend .clearfix;
-	position: absolute;
-	right: 0;
-	z-index: 1;
-	
-	nav {
-    @include transition(transform, 0.2s);
-    transition-timimg-function: ease-in-out;
-		box-shadow: inset 0 0 21px rgba(black, 0.1);
-		position: fixed;
-		top: -20px;
-    right: -320px;
-		padding: 60px 0;
-		height: calc(100vh + 40px);
-		width: 320px;
-		display: block;
-		z-index: 99;
-		background: url('../../img/shattered_@2X.png') repeat #444;
-		background-size: 250px;
-    transform: translateX(0);
-		
-		a {
-			color: white;
-			padding: 6px 20px;
-			display: block;
-		}
-	}
-}
-.offCanvas-open {
-	header .row,
-	.content,
-  .off-canvas-menu nav {
-		@include transition(transform, 0.35s);
-		transition-timimg-function: ease-in-out;
-		transform: translateX(-320px);
-	}
+.meta {
+  font-size: 1rem;
 }
 
 
 // article
 .content {
-	@include transition(transform, 0.2s);
-	transition-timimg-function: cubic-bezier(0.770, 0, 0.465, 1);
-	padding-top: 2.8rem;
+  padding: 1.6em 2.5em 0;
 	z-index: 2;
 	background: #fff;
-}
-
-// sidebar
-.side {
-	width: 125px;
-	
-	.date {
-		display: inline-block;
-		background: #ddd;
-		color: $bodytext;
-		font-weight: bold;
-		font-size: 0.88888889rem; // 16px
-		text-align: center;
-		margin-top: 0.48rem;
-		padding: 2.33333333rem 0;
-		border-radius: 3px;
-		width: 100%;
-	}
-}
-article.post {
-	@include span(12 of 12 last);
-	z-index: 2;
-	padding-bottom: 3.88888889rem;
-  padding-left: 9.72222222rem; // 175px
-}
-
-.sidenav {
-	min-height: 100vh;
-	display: block;
-	background: #555;
-	color: #FFF;
-	padding: 2.22222222rrem;
-	border-radius: 3px;
+  position: relative;
+  left: 16em;
 }
 
 figure {
-	width: calc(100% + 9.72222222rem);
-	margin-left: -9.72222222rem;
+	width: 100%;
 	display: block;
 	margin-bottom: 1.618rem;
 	padding: 0.27777778rem;
@@ -214,9 +62,8 @@ figure {
 .posttitle {
 	margin-bottom: 1.618rem;
 	h2 {
-		margin-bottom: 0;
 		margin-top: .15rem;
-		line-height: 1.12;
+		margin-bottom: .2em;
 	}
 	rem {
 		font-size: 0.88888889rem;
@@ -233,9 +80,9 @@ footer {
 
 .topfooter {
 	height: 11.1111111rem;
-	background: #eee;
+	background: $lightgrey;
 }
 .bottomfooter {
 	height: 16.6666666rem;
-	background: #ddd;
+	background: darken($lightgrey, 10);
 }
