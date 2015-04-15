@@ -1,11 +1,11 @@
 // layout
 
 .row {
-	max-width: 79em; // 1200px
   width: calc(100% - 16em);
 }
 .container {
 	@extend .clearfix;
+  margin-bottom: 3em;
 }
 .cols3 {
 
@@ -82,14 +82,20 @@
   }
   
 }
+#pagewrap {
+  max-width: 80em;
+  margin: 0 auto;
+}
 
-
+.fixed-header {
+  position: absolute;
+  left: 0;
+}
 header {
   background: $darkestgrey;
   width: 100%;
   max-width: 16em;
   position: fixed;
-  left: 0;
   height: 100vh;
   
   .mm-wrapper {
@@ -259,5 +265,20 @@ aside.sidebar {
   p {
     font-size: .7rem;
     font-style: italic;
+  }
+}
+.portfolio-list {
+  .item {
+    display: block;
+    width: 100%;
+    height: 12.5em;
+    background: #eee;
+    margin-bottom: 2em;
+    
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
