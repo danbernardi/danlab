@@ -103,22 +103,21 @@ footer {
 }
 .subnav {
   @extend .fullwidth;
+  @extend .clearfix;
   background: #fafafa;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
   padding: .5em 2.5em;
   margin-bottom: 2em;
   
   ul {
     li {
       display: inline-block;
-      margin-right: .5em;
-      font-size: 0.875rem;
+      font-size: 0.8125rem;
     }
   }
   .portfolio-nav {
     float: right;
     margin-right: 0;
+    height: 1.57142857em;
     
     li {
       margin-right: 0;
@@ -138,13 +137,10 @@ footer {
   }
 }
 
-aside.floatright {
-  width: 16em;
-  float: right;
-  margin-left: 2em;
+.specs{
   margin-bottom: 2em;
   background: #fafafa;
-  padding: 0 2em 1.5em;
+  padding: 0 1.5em 1.5em;
   
   ul li {
     padding: 0.8em 0;
@@ -167,8 +163,8 @@ aside.floatright {
     text-align: center;
     padding-bottom: 1em;
     padding-top: 2em;
-    width: calc(100% + 4em);
-    margin-left: -2em;
+    width: calc(100% + 3em);
+    margin-left: -1.5em;
     background: #eee;
   }
 }
