@@ -1,0 +1,117 @@
+
+// transition
+@mixin transition($type, $time) {
+	transition: $type $time ease-in-out;
+}
+
+// buttons
+@mixin btn($color) {
+	background: $color;
+	display: inline-block;
+	padding: 0.5em 1.55555556em;
+	color: white;
+	font-family: $headerfont;
+	border-radius: 0.16666667em;
+	line-height: 1;
+	font-weight: normal;
+	
+	&:hover {
+		background: lighten($color, 6);
+	}
+}
+
+// extends
+.pointer {
+	cursor: pointer;
+	cursor: hand;
+}
+.clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+// titles
+@mixin ztitle($background, $color) {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	line-height: 1.2;
+	
+	&:before {
+		content: '';
+		display: block;
+		height: 0.05555556em;
+		background: $lightblue;
+		margin-bottom: -0.83333333em;
+		position: absolute;
+		top: 0.77777778em;
+		width: 100%;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		background: $background;
+		display: inline-block;
+		position: relative;
+		padding: 0 1.11111111em;
+		text-transform: uppercase;
+		color: $color;
+	}
+}
+
+// icons
+@mixin fontawesome($content) {
+	content: $content;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@function parseInt($n) { /* 2 */
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px : (); /* 3 */
+  $rem: (); /* 3 */
+
+  @each $value in $values { /* 4 */
+
+    @if $value == 0 or $value == auto { /* 5 */
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+
+    @else {
+      $unit: unit($value);    /* 6 */
+      $val: parseInt($value); /* 6 */
+
+      @if $unit == "px" {  /* 7 */
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 10 + rem));
+      }
+
+      @if $unit == "rem" { /* 7 */
+        $px : append($px,  ($val * 10 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {     /* 8 */
+    #{$property}: $px;  /* 9 */
+  } @else {
+    #{$property}: $px;  /* 9 */
+    #{$property}: $rem; /* 9 */
+  }
+}

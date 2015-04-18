@@ -6,15 +6,13 @@
 			<!--<div class="date">Aug 21</div>-->
 		</div>
 		<article class="post hentry">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			
 			<figure class="title-image">
         
 			</figure>
 			
 			<div class="subnav">
 			  <ul>
-			    <li class="back-to-portoflio"><a href="<?php get_the_peramlink(8); ?>"><i class="fa fa-th"></i> Back to Portfolio</a></li>
+			    <li class="back-to-portoflio"><a href="portfolio.php"><i class="fa fa-th"></i> Back to Portfolio</a></li>
 			    <li class="site-meta"><ul>
 			      <li class="site-title">Eye Faster</li>
 			      <li class="site-link"><a href="http://ef.zendentest.com" target="_blank">View live site</a></li>
@@ -49,9 +47,6 @@
           </ul>
 		    </div>
 			</aside>
-			
-			<?php endwhile; wp_reset_postdata(); ?>
-		  <?php endif; ?>
 		</article>
 	</div>
 

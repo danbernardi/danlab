@@ -1,0 +1,50 @@
+// modules
+
+//widgets 
+.widget {
+	h6 {
+		margin-bottom: .3em;
+	}
+	margin-bottom: 1.618em;
+}
+
+// base form styles
+form {
+	input {
+		padding: 0.5em 0.77777778em;
+		display: block;
+		width: 100%;
+		border: 1px solid #ddd;
+		&:focus {
+			outline: none;
+			border-color: #888;
+		}
+	}
+}
+
+// tags
+.tags {
+	font-size: 0.77777778em;
+	display: block;
+	margin-top: 0.6em;
+	
+	a {
+		background: $blue;
+		padding: 0 1.2em;
+		border-radius: 3px;
+		color: white;
+		margin-bottom: .7em;
+		display: inline-block;
+		&:hover {
+			background: #444 !important;
+		}
+	}
+}
+
+.divider {
+  border-top: 1px solid rgba(black, 0.3);
+  border-bottom: 1px solid rgba(white, 0.08);
+  margin: 2em 0;
+  display: block;
+  clear: both;
+}
