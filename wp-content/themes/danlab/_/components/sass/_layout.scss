@@ -5,6 +5,7 @@
 }
 .container {
 	@extend .clearfix;
+  transition: opacity 0.4s ease-in-out;
 }
 .cols3 {
 
@@ -125,7 +126,8 @@ header {
           background: rgba(black, 0.1);
           color: $pink;
         }
-        i {
+        &:before {
+          @extend .fa;
           color: white;
           margin-right: 7px;
         }

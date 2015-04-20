@@ -33,14 +33,14 @@
                 <h4><?php the_title(); ?></h4>
               <?php } ?>
               <div class="reveal">
+                <a href="<?php the_permalink(); ?>" class="btn viewproject">
+                  <?php _e('View Project', 'danlab'); ?>
+                </a>
                 <?php if ( strlen($livesite) != 0 ) { ?>
                   <a href="<?php echo $livesite; ?>" class="btn viewsite" target="_blank">
                     <?php _e( 'View Live Site', 'danlab' ); ?>
                   </a>
                 <?php } ?>
-                <a href="<?php the_permalink(); ?>" class="btn viewproject">
-                  <?php _e('View Project', 'danlab'); ?>
-                </a>
               </div>
             </div>
           </div>

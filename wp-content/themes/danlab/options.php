@@ -161,6 +161,23 @@ function optionsframework_options() {
         'desc' => __('Enter the url for your github account', 'danlab'),
         'id' => 'danlab_github',
         'type' => 'text');
+        
+    // General Settings
+    $options[] = array(
+        'name' => __('Header Settings', 'danlab'),
+        'type' => 'heading');
+        
+    $options[] = array(
+        'name' => __('About Me Image', 'danlab'),
+        'desc' => __('Upload an image for the about me section', 'danlab'),
+        'id' => 'danlab_about_img',
+        'type' => 'upload');
+        
+    $options[] = array(
+        'name' => __('About Me Text', 'danlab'),
+        'desc' => __('Enter the text that appears in the about me section', 'danlab'),
+        'id' => 'danlab_about_text',
+        'type' => 'text');
 	
 
 	return $options;

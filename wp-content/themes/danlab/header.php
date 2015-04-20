@@ -9,16 +9,17 @@
 </head>
 <body <?php body_class(); ?>>
 	<div id="pagewrap">
+	<div class="loader"><div><i class="fa fa-spinner fa-spin"></i></div></div>
 	<div class="fixed-header">
     <header>
       <div>
         <div class="logo">
-          <a href="<?php echo home_url(); ?>">
+          <a href="<?php echo home_url(); ?>/">
             <img src="<?php echo of_get_option( 'danlab_logo'); ?>" alt="<?php bloginfo( 'name' ) ?>"><span>Daniel Bernardi</span>
           </a>
         </div>
         <nav id="on-canvas-menu">
-          <?php wp_nav_menu( array('theme_location'  => 'primary') ); ?>
+          <?php wp_nav_menu( array('theme_location'  => 'primary' ) ); ?>
         </nav>
         <div class="hdr-footer">
           <?php
@@ -52,5 +53,11 @@
           <div class="copy"><?php echo of_get_option( 'danlab_copyright'); ?></div>
         </div>
       </div>
+      <?php 
+        $aboutme_img = of_get_option( 'danlab_about_img');
+        $aboutme_text = of_get_option( 'danlab_about_text');
+      if (strlen($aboutme_img) != 0 || strlen($aboutme_text) != 0) { ?>
+        <div class="aboutme-holder" <?php if (strlen($aboutme_img) != 0) { echo 'data-img="' . $aboutme_img . '"'; } ?>" <?php if (strlen($aboutme_text) != 0) { echo 'data-text="' . $aboutme_text . '"'; } ?></div>
+      <?php } ?>
     </header>
 	</div>

@@ -96,10 +96,10 @@ footer {
 
 .title-image {
   width: 100%;
-  background: #ddd;
   display: block;
-  height: 18.75em;
-  margin-bottom: 2em;
+  height: auto;
+  background: transparent;
+  margin-bottom: 1em;
 }
 .subnav {
   @extend .fullwidth;
@@ -168,4 +168,32 @@ footer {
     margin-left: -1.5em;
     background: #eee;
   }
+}
+
+.aboutme-holder {
+  display: none;
+}
+
+.loader {
+  display: none;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  div {
+    display: block;
+    width: 100%;
+    max-width: 80em;
+    margin: 0 auto;
+    position: relative;
+    i {
+      position: absolute;
+      right: 0.5em;
+      top: 0.5em;
+    }
+  }
+}
+.loading .loader {
+  display: block;
 }

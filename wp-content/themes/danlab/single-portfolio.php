@@ -14,7 +14,7 @@
 			?>
 			
 			<figure class="title-image">
-        
+        <img src="/img/eye-faster_device.jpg">
 			</figure>
 			
 			<div class="subnav">
