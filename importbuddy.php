@@ -20,8 +20,8 @@ $importbuddy_file = basename( __FILE__ ); // filename of importbuddy.php (or wha
 
 $abspath = rtrim( dirname( __FILE__ ), '\\/' ) . '/';
 define( 'ABSPATH', $abspath );
-define( 'PB_BB_VERSION', '5.1.1.18 (downloaded 2015-03-24T22:06:09+00:00)' );
-define( 'PB_PASSWORD', '268d6b95be5294f304228b6904216410' );
+define( 'PB_BB_VERSION', '5.1.1.18 (downloaded 2015-04-20T22:53:31+00:00)' );
+define( 'PB_PASSWORD', '8f9e7c7e513c6157e294da5109cb4ab4' );
 
 // Used by wpdb class.
 define('DB_CHARSET', 'utf8');
