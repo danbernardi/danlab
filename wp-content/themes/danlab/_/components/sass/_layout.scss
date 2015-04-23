@@ -111,13 +111,14 @@
   left: 0;
 }
 header {
+  transition: opacity 0.3s ease-in-out;
   background: $darkestgrey;
   width: 100%;
   max-width: 16em;
   position: fixed;
   height: 100vh;
   @include breakpoint($large) {
-    
+    opacity: 0;
   }
   
   .mm-wrapper {

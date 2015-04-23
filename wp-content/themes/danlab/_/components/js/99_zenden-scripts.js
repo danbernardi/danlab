@@ -33,26 +33,31 @@ j$(document).ready(function () {
       
       j$('.mob-menu-trigger span').on('click', function () {
         if (!menuOpen) {
+          j$('header').css('opacity', '1');
           j$('.content').addClass('menu-open');
           menuOpen = true;
         } else {
           menuOpen = false;
+          j$('header').css('opacity', '0');
           j$('.content').removeClass('menu-open');
         }
       });
       
       j$(window).resize(function () {
+        j$('header').css('opacity', '0');
         j$('.content').removeClass('menu-open');
         menuOpen = false;
       });
       
       j$(window).on('statechangecomplete', function () {
+        j$('header').css('opacity', '0');
         j$('.content').removeClass('menu-open');
         menuOpen = false;
       });
       
       
       j$('.overlay').on('click', function () {
+        j$('header').css('opacity', '0');
         j$('.content, .mob-menu').removeClass('menu-open');
         menuOpen = false;
       });
@@ -109,14 +114,5 @@ j$(document).ready(function () {
     }());
     
   });
-  
-  (function detectTouch() {
-    if (Modernizr.touch) {
-      j$('body').addClass('isTouch');
-      alert('touch device');
-    } else {
-      alert('not a touch device');
-    }
-  }());
   
 });
