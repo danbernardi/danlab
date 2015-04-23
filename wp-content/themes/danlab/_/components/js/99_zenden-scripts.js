@@ -115,7 +115,7 @@ j$(document).ready(function () {
       j$('body').addClass('isTouch');
       alert('touch device');
     } else {
-      return false;
+      alert('not a touch device');
     }
   }());
   
