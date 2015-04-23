@@ -1,6 +1,7 @@
 <?php include('header.php')?>
 
 <section class="content row">
+	<div class="overlay"></div>
 	<div class="container">
 		<div class="side">
 			<!--<div class="date">Aug 21</div>-->

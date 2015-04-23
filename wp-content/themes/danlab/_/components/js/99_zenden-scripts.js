@@ -52,12 +52,10 @@ j$(document).ready(function () {
       });
       
       
-      if (j$('.content').hasClass('menu-open')) {
-        j$('.content, .mob-menu').on('click', function () {
-          console.log('test');
-          j$('.content, .mob-menu').removeClass('menu-open');
-        });
-      }
+      j$('.overlay').on('click', function () {
+        j$('.content, .mob-menu').removeClass('menu-open');
+        menuOpen = false;
+      });
     }());
 
     (function disableAjax() {
