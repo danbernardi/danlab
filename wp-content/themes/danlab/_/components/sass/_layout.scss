@@ -350,7 +350,7 @@ aside.sidebar {
         position: absolute;
         top: 50%;
         margin-top: -2em;
-        max-width: 20em;
+        max-width: 18em;
         max-height: 4em;
         left: 3.875em;
         @include breakpoint($largest) {
@@ -428,6 +428,19 @@ aside.sidebar {
     }
   }
 }
+
+.isTouch .portfolio-list {
+  .logo, h4 {
+    transform: translateX(-1em);
+  }
+  .thumb, .reveal {
+    transform: none !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+  }
+}
+
 .btn {
   transition: all 0.2s ease-in-out;
   background: white;

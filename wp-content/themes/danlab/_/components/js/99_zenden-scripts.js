@@ -110,4 +110,12 @@ j$(document).ready(function () {
     
   });
   
+  (function detectTouch() {
+    if (Modernizr.touch) {
+      j$('body').addClass('isTouch');
+    } else {
+      return false;
+    }
+  }());
+  
 });
