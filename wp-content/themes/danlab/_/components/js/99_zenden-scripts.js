@@ -113,6 +113,7 @@ j$(document).ready(function () {
   (function detectTouch() {
     if (Modernizr.touch) {
       j$('body').addClass('isTouch');
+      alert('touch device');
     } else {
       return false;
     }
