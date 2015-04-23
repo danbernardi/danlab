@@ -141,7 +141,8 @@ header {
         color: $lightblue;
         display: block;
         position: relative;
-        &:hover {
+        &:hover,
+        &:focus {
           background: rgba(black, 0.1);
           color: $pink;
         }
@@ -167,7 +168,8 @@ header {
             top: 50%;
             margin-top: -0.5em;
           }
-          &:hover + a {
+          &:hover + a,
+          &:focus + a {
             background: rgba(black, 0.1);
             color: $pink;
           }
@@ -489,10 +491,12 @@ aside.sidebar {
   margin: 0;
   position: absolute;
   left: 0;
+  z-index: 2;
 }
 .site-meta {
   width: 100%;
   text-align: center;
+  z-index: 1;
   @include breakpoint($larger) {
     top: 3.07692308em;
     position: relative;
@@ -515,6 +519,7 @@ aside.sidebar {
   position: absolute;
   right: 0;
   text-align: right;
+  z-index: 2;
 }
 
 article.post {
