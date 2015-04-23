@@ -43,16 +43,26 @@ j$(document).ready(function () {
         }
       });
       
+      
+      
       j$(window).resize(function () {
-        j$('header').css('opacity', '0');
-        j$('.content').removeClass('menu-open');
-        menuOpen = false;
+        if (j$(window).width() >= 864) {
+          j$('header').css('opacity', '1');
+        } else {
+          j$('header').css('opacity', '0');
+          j$('.content').removeClass('menu-open');
+          menuOpen = false;
+        }
       });
       
       j$(window).on('statechangecomplete', function () {
-        j$('header').css('opacity', '0');
-        j$('.content').removeClass('menu-open');
-        menuOpen = false;
+        if (j$(window).width() >= 864) {
+          return false;
+        } else {
+          j$('header').css('opacity', '0');
+          j$('.content').removeClass('menu-open');
+          menuOpen = false;
+        }
       });
       
       
