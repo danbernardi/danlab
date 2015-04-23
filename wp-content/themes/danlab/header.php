@@ -8,8 +8,16 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<div id="pagewrap">
+	<section id="pagewrap">
 	<div class="loader"><div><i class="fa fa-spinner fa-spin"></i></div></div>
+	<div class="mob-menu">
+	  <div class="logo">
+	    <a href="<?php echo home_url(); ?>/">
+        <img src="<?php echo of_get_option( 'danlab_logo'); ?>" alt="<?php bloginfo( 'name' ) ?>"><span>Daniel Bernardi</span>
+      </a>
+	  </div>
+	  <div class="mob-menu-trigger"><span><i class="fa fa-fw fa-bars"></i></span></div>
+	</div>
 	<div class="fixed-header">
     <header>
       <div>
@@ -33,19 +41,19 @@
               <ul class="socialmedia">
                 <?php
                   if( strlen($facebook) != 0 ) { ?>
-                    <li><a href="<?php echo $facebook; ?>"><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a target="_blank" href="<?php echo $facebook; ?>"><i class="fa fa-facebook-square"></i></a></li>
                   <?php }
                   if( strlen($linkedin) != 0 ) { ?>
-                    <li><a href="<?php echo $linkedin; ?>"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a target="_blank" href="<?php echo $linkedin; ?>"><i class="fa fa-linkedin-square"></i></a></li>
                   <?php }
                   if( strlen($googleplus) != 0 ) { ?>
-                    <li><a href="<?php echo $googleplus; ?>"><i class="fa fa-google-plus-square"></i></a></li>
+                    <li><a target="_blank" href="<?php echo $googleplus; ?>"><i class="fa fa-google-plus-square"></i></a></li>
                   <?php }
                   if( strlen($twitter) != 0 ) { ?>
-                    <li><a href="<?php echo $twitter; ?>"><i class="fa fa-twitter-square"></i></a></li>
+                    <li><a target="_blank" href="<?php echo $twitter; ?>"><i class="fa fa-twitter-square"></i></a></li>
                   <?php }
                   if( strlen($github) != 0 ) { ?>
-                    <li><a href="<?php echo $github; ?>"><i class="fa fa-github-square"></i></a></li>
+                    <li><a target="_blank" href="<?php echo $github; ?>"><i class="fa fa-github-square"></i></a></li>
                   <?php } ?>
               </ul>
             <?php } ?>

@@ -4,6 +4,7 @@ javascripts_dir = '_/js'
 output_style = :compressed
 
 require 'autoprefixer-rails'
+require 'breakpoint'
 
 on_stylesheet_saved do |file|
   css = File.read(file)

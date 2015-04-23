@@ -3,9 +3,12 @@
 @import "compass/typography/vertical_rhythm";        // vertical rythm
 @import                      "modular-scale";        // default scaling of text based on golden ratio
 @import                               "susy";        // sass based grid
+@import                         "breakpoint";        // sass based media queries
 @import                        "fontawesome";        // icon library
 @import               "fontawesome-li-items";        // icon library formatted for li items
-@import                  "_jquery.mmenu.all";        // on canvas menu
+@import                   "jquery.mmenu.all";        // on canvas menu
+@import                              "slick";        // base slick carousel styles
+@import                        "slick-theme";        // theme slick carousel styles
 @import                             "config";        // store configurations here
 @import                          "variables";        // store variables here
 @import                             "mixins";        // store mixins here

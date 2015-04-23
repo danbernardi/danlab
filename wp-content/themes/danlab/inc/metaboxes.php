@@ -33,6 +33,13 @@ function danlab_portfolio_options( array $meta_boxes ) {
                 'type'       => 'text_url',
                 'show_on_cb' => 'cmb2_hide_if_no_cats',
             ),
+            array(
+                'name'       => __( 'Top Image', 'danlab' ),
+                'desc'       => __( 'Upload the image the apears at the top of the portfolio page', 'danlab' ),
+                'id'         => $prefix . 'port_mockup',
+                'type'       => 'file',
+                'show_on_cb' => 'cmb2_hide_if_no_cats',
+            ),
         ),
     );
     

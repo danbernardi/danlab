@@ -25,7 +25,7 @@
           <div class="item">
             <div class="holder">
               <?php if ( has_post_thumbnail() ) { ?>
-                <img class="thumb" src="<?php echo $thumb_url; ?>">
+                <div class="thumb" style="background-image: url(<?php echo $thumb_url; ?>);"></div>
               <?php } ?>
               <?php if ( strlen($site_logo) !=0 ) { ?>
                 <img class="logo" src="<?php echo $site_logo; ?>" alt="<?php the_title(); ?>">

@@ -1,3 +1,4 @@
+<!--
 <footer>
 	<div class="topfooter">
 		
@@ -6,6 +7,7 @@
 		
 	</div>
 </footer>
+-->
 </section>
 </div>
 <?php wp_footer(); ?>

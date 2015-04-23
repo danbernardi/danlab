@@ -11,14 +11,25 @@
 			  $livesite = get_post_meta( get_the_ID(), '_danlab_livesite', 1 );
 			  $prev_post = get_previous_post();
         $next_post = get_next_post();
+        $mockup_img = get_post_meta( get_the_ID(), '_danlab_port_mockup', 1 );
 			?>
 			
-			<figure class="title-image">
-        <img src="/img/eye-faster_device.jpg">
-			</figure>
+			<?php if ( strlen($mockup_img) != 0 ) { ?>
+        <figure class="title-image">
+          <img src="<?php echo $mockup_img; ?>" alt="<?php the_title(); ?>">
+        </figure>
+      <?php } ?>
 			
 			<div class="subnav">
 			  <ul>
+			    <li class="portfolio-nav"><ul>
+			      <?php if ( !empty( $prev_post ) ) { ?>
+			        <li class="prev"><a href="<?php echo get_permalink( $prev_post->ID ); ?>"><i class="fa fa-fw fa-angle-left"></i></a></li>
+            <?php } ?>
+            <?php if ( !empty( $next_post ) ) { ?>
+			        <li class="next"><a href="<?php echo get_permalink( $next_post->ID ); ?>"><i class="fa fa-fw fa-angle-right"></i></a></li>
+            <?php } ?>
+			    </ul></li>
 			    <li class="back-to-portoflio"><a href="<?php echo get_permalink(8); ?>">
             <i class="fa fa-th"></i> 
             <?php _e('Back to Portfolio', 'danlab'); ?>
@@ -29,14 +40,6 @@
               <li class="site-link"><a href="<?php echo $livesite; ?>" target="_blank">
                 <?php _e('View live site', 'danlab'); ?>
               </a></li>
-            <?php } ?>
-			    </ul></li>
-			    <li class="portfolio-nav"><ul>
-			      <?php if ( !empty( $prev_post ) ) { ?>
-			        <li class="prev"><a href="<?php echo get_permalink( $prev_post->ID ); ?>"><i class="fa fa-fw fa-angle-left"></i></a></li>
-            <?php } ?>
-            <?php if ( !empty( $next_post ) ) { ?>
-			        <li class="next"><a href="<?php echo get_permalink( $next_post->ID ); ?>"><i class="fa fa-fw fa-angle-right"></i></a></li>
             <?php } ?>
 			    </ul></li>
 			  </ul>

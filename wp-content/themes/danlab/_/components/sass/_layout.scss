@@ -2,6 +2,9 @@
 
 .row {
   width: calc(100% - 16em);
+  @include breakpoint($large) {
+    width: 100%;
+  }
 }
 .container {
 	@extend .clearfix;
@@ -33,6 +36,14 @@
 .fullwidth {
   width: calc(100% + 5em);
   margin-left: -2.5em;
+  @include breakpoint($large) {
+    width: calc(100% + 3em);
+    margin-left: -1.5em;
+  }
+  @include breakpoint($small) {
+    width: calc(100% + 2em);
+    margin-left: -1em;
+  }
 }
 
 .shadow-border {
@@ -105,6 +116,9 @@ header {
   max-width: 16em;
   position: fixed;
   height: 100vh;
+  @include breakpoint($large) {
+    
+  }
   
   .mm-wrapper {
     height: 100%;
@@ -113,8 +127,12 @@ header {
   #on-canvas-menu {
     height: calc(100vh - 10.6111111em);
     width: 100%;
-    top: 88px;
+    top: 4.88888889em;
     background: $darkgrey;
+    @include breakpoint($large) {
+      top: 3.33333333em;
+      height: calc(100vh - 9.05555556em);
+    }
     li {
       position: relative;
       a {
@@ -268,9 +286,17 @@ header {
   @include span(8 of 12 last);
   z-index: 2;
 	padding-bottom: 3.88888889rem;
+  @include breakpoint($largest) {
+    @include span(12 of 12 last);
+    padding-bottom: 1em;
+  }
 }
 aside.sidebar {
   @include span(4 of 12);
+  @include breakpoint($largest) {
+    @include span(12 of 12 last);
+    padding-bottom: 1em;
+  }
 }
 .portfolio-list {
   .item {
@@ -281,6 +307,13 @@ aside.sidebar {
     margin-bottom: 2em;
     max-height: 14.0625em;
     overflow: hidden;
+    @include breakpoint($largest) {
+      height: 17.5em;
+      max-height: none;
+    }
+    @include breakpoint($small) {
+      height: 18.5em;
+    }
     &:nth-child(2),
     &:nth-child(5),
     &:nth-child(8) {
@@ -298,7 +331,8 @@ aside.sidebar {
       height: 100%;
       
       img,
-      .reveal {
+      .reveal,
+      .thumb {
         transition: transform 0.4s ease-in-out,
                     opacity   0.4s ease-in-out;
       }
@@ -307,16 +341,31 @@ aside.sidebar {
         opacity: 0.4;
         width: calc(100% + 5em);
         margin-right: -5em;
-        max-width: none;
+        display: block;
+        height: 100%;
+        background-size: cover;
       }
       .logo,
       h4 {
         position: absolute;
         top: 50%;
         margin-top: -2em;
-        width: 20em;
+        max-width: 20em;
         max-height: 4em;
         left: 3.875em;
+        @include breakpoint($largest) {
+          margin-top: -4em;
+        }
+        @include breakpoint($small) {
+          transform: none !important;
+          margin: 0 auto;
+          position: relative;
+          top: -15em;
+          left: auto;
+          display: block;
+          padding: 0 2em;
+          max-width: 100%;
+        }
       }
       h4 {
         transition: transform 0.4s ease-in-out;
@@ -329,6 +378,28 @@ aside.sidebar {
         right: 3em;
         opacity: 0;
         transform: translateY(2em);
+        @include breakpoint($largest) {
+          margin-top: 2.55555556em;
+          right: auto;
+          left: 3em;
+        }
+        @include breakpoint($small) {
+          opacity: 1;
+          transform: none;
+          position: relative;
+          top: -12.2222222em;
+          bottom: 0;
+          left: auto;
+          right: auto;
+          width: 100%;
+          text-align: center;
+          margin-top: 0;
+          
+          .btn {
+            display: block;
+            margin: 0 3em 1em;
+          }
+        }
       }
     }
     &:hover {
@@ -345,10 +416,20 @@ aside.sidebar {
         opacity: 1;
         
       }
+      @include breakpoint($small) {
+        transform: none;
+        .logo,
+        h4,
+        .thumb,
+        .reveal {
+          transform: none;
+        }
+      }
     }
   }
 }
 .btn {
+  transition: all 0.2s ease-in-out;
   background: white;
   display: inline-block;
   padding: 1em 2em;
@@ -358,14 +439,51 @@ aside.sidebar {
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 4px;
+  &.blue {
+    background: $blue;
+    color: white;
+    margin-right: 1em;
+    &:hover {
+      background: lighten($blue, 4);
+    }
+  }
+  &.pink {
+    background: $pink;
+    color: white;
+    margin-right: 1em;
+    &:hover {
+      background: lighten($pink, 4);
+    }
+    @include breakpoint($small) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 0.5em;
+    }
+  }
+  &.green {
+    background: $green;
+    color: white;
+    margin-right: 1em;
+    &:hover {
+      background: lighten($green, 4);
+    }
+  }
 }
 
 .back-to-portoflio {
-  @include span(3 of 12);
+  width: 8.84615385em;
+  margin: 0;
+  position: absolute;
+  left: 0;
 }
 .site-meta {
-  @include span(6 of 12);
+  width: 100%;
   text-align: center;
+  @include breakpoint($larger) {
+    top: 3.07692308em;
+    position: relative;
+    text-align: left;
+  }
   
   li {
     &:after {
@@ -379,10 +497,136 @@ aside.sidebar {
   }
 }
 .portfolio-nav {
-  @include span(3 of 12 last);
+  width: 6em;
+  position: absolute;
+  right: 0;
   text-align: right;
 }
 
 article.post {
   margin-bottom: 2em;
+}
+
+.left-column {
+  width: 50%;
+  float: left;
+  height: calc(100vh - 2.5em);
+  padding-bottom: 1em;
+  padding-right: 1em;
+  overflow-y: scroll;
+  @include breakpoint($largest) {
+    width: 100%;
+    padding-right: 0;
+    height: auto;
+    padding-bottom: 2em;
+  }
+}
+.right-column {
+  @include span(6 of 12 last);
+  height: 100vh;
+  background: darken($blue, 5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include breakpoint($largest) {
+    width: calc(100% + 5em);
+    position: relative;
+    clear: both;
+    height: auto;
+    right: auto;
+    float: none;
+    margin-left: -2.5em;
+    padding-bottom: 4em;
+    margin-bottom: -2em;
+  }
+  @include breakpoint($large) {
+    width: calc(100% + 3em);
+    margin-left: -1.5em;
+  }
+  @include breakpoint($small) {
+    width: calc(100% + 2em);
+    margin-left: -1em;
+  }
+}
+
+
+.gallery-cell {
+  text-align: center;
+  padding-top: 6em;
+  @include breakpoint($small) {
+    padding-top: 4em;
+  }
+  
+  img {
+    margin: 0 auto;
+    
+    &.ipad {
+      width: 18.75em;
+      @include breakpoint($small) {
+        width: 11em;
+      }
+    }
+    &.iphone {
+      width: 12.5em;
+      @include breakpoint($small) {
+        width: 7.5em;
+      }
+    }
+    &.macbook {
+      width: 600px;
+      padding-top: 5em;
+    }
+    &.browser {
+      width: 18em;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+  }
+}
+.flickity-page-dots {
+  bottom: -3em;
+}
+
+.slick-prev {
+  font-size: 100%;
+  left: 0.75em;
+}
+.slick-next {
+  font-size: 100%;
+  right: 0.75em;
+}
+.mob-menu {
+  display: none;
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  background: $darkestgrey;
+  @include breakpoint($large) {
+    display: block;
+  }
+  
+  &.menu-open {
+    transform: translateX(16em);
+  }
+  
+  .logo a {
+    padding: .4em 1.35em .2em;
+    background: transparent;
+    width: auto;
+    display: inline-block;
+  }
+  
+  .mob-menu-trigger {
+    position: absolute;
+    right: 1.5em;
+    top: 1.22222222em;
+    cursor: hand;
+    cursor: pointer;
+    
+    i {
+      color: white;
+    }
+  }
 }
