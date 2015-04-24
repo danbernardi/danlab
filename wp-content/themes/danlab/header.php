@@ -9,6 +9,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+	<?php include_once("analyticstracking.php") ?>
 	<section id="pagewrap">
 	<div class="loader"><div><i class="fa fa-spinner fa-spin"></i></div></div>
 	<div class="mob-menu">
